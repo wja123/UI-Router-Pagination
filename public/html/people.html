@@ -1,0 +1,30 @@
+<div class = "container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Gender</td>
+        <td>Birth Year</td>
+        <td>Mass</td>
+        <td>Details</td>
+      </tr>
+    </thead>
+    <tbody ng-repeat="person in people track by $index">
+      <td>{{person.name}}</td>
+      <td>{{person.gender}}</td>
+      <td>{{person.birth_year}}</td>
+      <td>{{person.mass}}</td>
+    <td><button ng-click="userDetails($scope)"><span class ="glyphicon glyphicon-user" ></span></button></td>
+    </tbody>
+  </table>
+</div>
+
+<div class="container pagination-menu>
+  <div class="footer">
+    <nav>
+      <ul class="pagination" ng-repeat="pages in numPages">
+        <li><a ng-href="#/{{pages}}">{{pages}}</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Star Wars Character Listing</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="/js/module.js"></script>
+  <script src="/js/controllers.js"></script>
+  <script src="/js/services.js"></script>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body ng-app = "swApp">
+  <div class="container">
+
+
+  <h1>Star Wars Character Listing</h1>
+  <hr>
+  <span><button ui-sref= 'swPeople'>Return to Character Listing</button></span>
+  <!-- <span><a ui-sref= 'swPerson'>People</a></span> -->
+  <hr>
+    </div>
+  <ui-view></ui-view>
+
+<!-- 
+<div class="container pagination-menu" ng-show="$state.current.name === 'swPeople'">
+  <div class="footer">
+    <nav>
+      <ul class="pagination" ng-repeat="pages in numPages">
+        <li><a ng-href="#/{{pages}}">{{pages}}</a></li>
+      </ul>
+    </nav>
+  </div>
+</div> -->
+  
+</body>
+</html>
