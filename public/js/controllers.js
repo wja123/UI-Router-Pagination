@@ -34,5 +34,4 @@ app.controller("peopleCtrl", function($scope, $state, $stateParams, SwapiService
 
 app.controller("personCtrl", function($scope, $state, $stateParams, SwapiService) {
     $scope.personView = $stateParams.personParam;
-
 });

@@ -3,7 +3,7 @@
 var app = angular.module('swApp');
 
 app.service("SwapiService", function($http) {
-
+    this.pages =[];
     this.getNumPages = () => {
         
         $http.get("//swapi.co/api/people/").then(res => {
@@ -21,11 +21,16 @@ app.service("SwapiService", function($http) {
         if (!pageNum) {
             pageNum = 1;
         }
+        if(!this.pages[pageNum]){            
         $http.get(`//swapi.co/api/people/?page=${pageNum}`).then(res => {
             this.people = res.data.results;
         }, err => {
             console.log("SwapiService Get Error!", err);
         });
+        }
+        else{
+          this.people = this.pages[pageNum];  
+        }
     }
 
     this.getPerson = () => {
